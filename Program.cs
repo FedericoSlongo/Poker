@@ -1,4 +1,5 @@
-﻿using System;
+
+using System;
 
 namespace Lab_Poker
 {
@@ -6,17 +7,12 @@ namespace Lab_Poker
     {
         static void Main(string[] args)
         {
-            int punteggio_1, punteggio_2, a, b;
+            int punteggio_1, punteggio_2, a = 0, b = 0;
             string seme_1, seme_2;
             Console.Write("Inserisci il punteggio tuo ");
             punteggio_1 = Convert.ToInt32(Console.ReadLine());
             Console.Write("Inserire il punteggio dell'altra persona ");
             punteggio_2 = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Inserire il seme tuo ");
-            seme_1 = Console.ReadLine();
-            Console.Write("Inserire il seme dell'altro ");
-            seme_2 = Console.ReadLine();
 
             if (punteggio_1 < punteggio_2)
             {
@@ -28,51 +24,61 @@ namespace Lab_Poker
             }
             else if (punteggio_1 == punteggio_2)
             {
-                Console.WriteLine("Siete pari :/ (con il punteggio)");
-            }
+                Console.Write("Inserire il seme tuo ");
+                seme_1 = Console.ReadLine();
+                Console.Write("Inserire il seme dell'altro ");
+                seme_2 = Console.ReadLine();
 
-            if (seme_1 == "cuori")
-            {
-                a = 4;
-            }
-            else if (seme_1 == "quadri")
-            {
-                a = 3;
-            }
-            else if (seme_1 == "fiori")
-            {
-                a = 2;
-            }
-            else if (seme_1 == "picche")
-            {
-                a = 1;
-            }
+                switch (seme_1)
+                {
+                    case "cuori":
+                        a = 4;
+                        break;
+                    case "quadri":
+                        a = 3;
+                        break;
+                    case "fiori":
+                        a = 2;
+                        break;
+                    case "picche":
+                        a = 1;
+                        break;
+                    default:
+                        Console.WriteLine("Non hai inserito una parola valida!");
+                        break;
+                }
 
-            if (seme_2 == "cuori")
-            {
-                b = 4;
-            }
-            else if (seme_2 == "quadri")
-            {
-                b = 3;
-            }
-            else if (seme_2 == "fiori")
-            {
-                b = 2;
-            }
-            else if (seme_2 == "picche")
-            {
-                b = 1;
-            }
+                switch (seme_2)
+                {
+                    case "cuori":
+                        b = 4;
+                        break;
+                    case "quadri":
+                        b = 3;
+                        break;
+                    case "fiori":
+                        b = 2;
+                        break;
+                    case "picche":
+                        b = 1;
+                        break;
+                    default:
+                        Console.WriteLine("Non hai inserito una parola valida!");
+                        break;
+                }
 
-
-            if (seme_1 == seme_2)
-            {
-                Console.WriteLine("Siete pari :/ (con il seme)");
-            }
-            else if ()
-            {
-
+                if (a == b)
+                {
+                    Console.WriteLine("Siete pari :/");
+                }
+                else if (a > b)
+                {
+                    Console.WriteLine("Tu hai vinto");
+                }
+                else if (a < b)
+                {
+                    Console.WriteLine("L'altra persona a vinto");
+                }
             }
         }
     }
