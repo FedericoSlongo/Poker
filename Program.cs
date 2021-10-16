@@ -10,14 +10,12 @@ namespace Lab_Poker
             string punteggio1, punteggio2, seme_1, seme_2, language;
 
             Console.Write("What language would you let the app to run (Italian and English 'work') ");
-            language = Console.ReadLine();
+            language = Console.ReadLine(ToLower());
 
             switch (language)
             {
                 case "itaian":
-                case "Italian":
                 case "it":
-                case "It":
                     Console.Write("Inserisci il punteggio tuo ");
                     punteggio1 = Console.ReadLine();
                     Console.Write("Inserire il punteggio dell'altra persona ");
@@ -150,10 +148,8 @@ namespace Lab_Poker
                         }
                     }
                     break;
-                case "English":
                 case "english":
                 case "en":
-                case "En":
                     Console.Write("Enter your score ");
                     punteggio1 = Console.ReadLine();
                     Console.Write("Enter the score of the other person ");
