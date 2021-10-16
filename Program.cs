@@ -1,4 +1,3 @@
-
 using System;
 
 namespace Lab_Poker
@@ -7,20 +6,80 @@ namespace Lab_Poker
     {
         static void Main(string[] args)
         {
-            int punteggio_1, punteggio_2, a = 0, b = 0;
-            string seme_1, seme_2;
+            int punteggio_1 = 0, punteggio_2 = 0, a = 0, b = 0;
+            string punteggio1, punteggio2, seme_1, seme_2;
             Console.Write("Inserisci il punteggio tuo ");
-            punteggio_1 = Convert.ToInt32(Console.ReadLine());
+            punteggio1 = Console.ReadLine();
             Console.Write("Inserire il punteggio dell'altra persona ");
-            punteggio_2 = Convert.ToInt32(Console.ReadLine());
+            punteggio2 = Console.ReadLine();
+
+            switch (punteggio1)
+            {
+                case "1":
+                case "2":
+                case "3":
+                case "4":   
+                case "5":   
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                    punteggio_1 = Convert.ToInt32(punteggio1);
+                    break;
+                case "Jack":
+                case "jack":
+                    punteggio_1 = 10;
+                    break;
+                case "Queen":
+                case "queen":
+                    punteggio_1 = 11;
+                    break;
+                case "King":
+                case "king":
+                    punteggio_1 = 12;
+                    break;
+                default:
+                    Console.WriteLine("Il tuo punteggio non è valido");
+                    break;
+            }
+
+            switch (punteggio2)
+            {
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                    punteggio_2 = Convert.ToInt32(punteggio2);
+                    break;
+                case "Jack":
+                case "jack":
+                    punteggio_2 = 10;
+                    break;
+                case "Queen":
+                case "queen":
+                    punteggio_2 = 11;
+                    break;
+                case "King":
+                case "king":
+                    punteggio_2 = 12;
+                    break;
+                default:
+                    Console.WriteLine("Il punteggio dell'avversario non è valido");
+                    break;
+            }
 
             if (punteggio_1 < punteggio_2)
             {
-                Console.WriteLine("L'altra persona ha vinto! (con il punteggio)");
+                Console.WriteLine("L'altra persona ha vinto!");
             }
             else if (punteggio_1 > punteggio_2)
             {
-                Console.WriteLine("Hai vinto! (con il punteggio)");
+                Console.WriteLine("Hai vinto!");
             }
             else if (punteggio_1 == punteggio_2)
             {
