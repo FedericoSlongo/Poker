@@ -154,7 +154,145 @@ namespace Lab_Poker
                 case "english":
                 case "en":
                 case "En":
-                    Console.WriteLine("This programm will be translated in a bit");
+                    Console.Write("Enter your score ");
+                    punteggio1 = Console.ReadLine();
+                    Console.Write("Enter the score of the other person ");
+                    punteggio2 = Console.ReadLine();
+
+                    switch (punteggio1)
+                    {
+                        case "1":
+                        case "2":
+                        case "3":
+                        case "4":
+                        case "5":
+                        case "6":
+                        case "7":
+                        case "8":
+                        case "9":
+                            punteggio_1 = Convert.ToInt32(punteggio1);
+                            break;
+                        case "Jack":
+                        case "jack":
+                            punteggio_1 = 10;
+                            break;
+                        case "Queen":
+                        case "queen":
+                            punteggio_1 = 11;
+                            break;
+                        case "King":
+                        case "king":
+                            punteggio_1 = 12;
+                            break;
+                        default:
+                            Console.WriteLine("You're score isn't valid");
+                            break;
+                    }
+
+                    switch (punteggio2)
+                    {
+                        case "1":
+                        case "2":
+                        case "3":
+                        case "4":
+                        case "5":
+                        case "6":
+                        case "7":
+                        case "8":
+                        case "9":
+                            punteggio_2 = Convert.ToInt32(punteggio2);
+                            break;
+                        case "Jack":
+                        case "jack":
+                            punteggio_2 = 10;
+                            break;
+                        case "Queen":
+                        case "queen":
+                            punteggio_2 = 11;
+                            break;
+                        case "King":
+                        case "king":
+                            punteggio_2 = 12;
+                            break;
+                        default:
+                            Console.WriteLine("The other score isn't valid");
+                            break;
+                    }
+
+                    if (punteggio_1 < punteggio_2)
+                    {
+                        Console.WriteLine("The other person won!");
+                    }
+                    else if (punteggio_1 > punteggio_2)
+                    {
+                        Console.WriteLine("You won!");
+                    }
+                    else if (punteggio_1 == punteggio_2)
+                    {
+                        Console.Write("Insert your seed ");
+                        seme_1 = Console.ReadLine();
+                        Console.Write("Insert the other person seed ");
+                        seme_2 = Console.ReadLine();
+
+                        switch (seme_1)
+                        {
+                            case "heart":
+                            case "Heart":
+                                a = 4;
+                                break;
+                            case "diamonds":
+                            case "Diamonds":
+                                a = 3;
+                                break;
+                            case "clubs":
+                            case "Clubs":
+                                a = 2;
+                                break;
+                            case "spades":
+                            case "Spades":
+                                a = 1;
+                                break;
+                            default:
+                                Console.WriteLine("You didn't insert a valid seed!");
+                                break;
+                        }
+
+                        switch (seme_2)
+                        {
+                            case "heart":
+                            case "Heart":
+                                b = 4;
+                                break;
+                            case "diamonds":
+                            case "Diamonds":
+                                b = 3;
+                                break;
+                            case "clubs":
+                            case "Clubs":
+                                b = 2;
+                                break;
+                            case "spades":
+                            case "Spades":
+                                b = 1;
+                                break;
+                            default:
+                                Console.WriteLine("You didn't insert a valid seed");
+                                break;
+                        }
+
+                        if (a == b)
+                        {
+                            Console.WriteLine("You're equal :/");
+                        }
+                        else if (a > b)
+                        {
+                            Console.WriteLine("You won!");
+                        }
+                        else if (a < b)
+                        {
+                            Console.WriteLine("The other person won!");
+                        }
+                    }
                     break;
 
                 default:
