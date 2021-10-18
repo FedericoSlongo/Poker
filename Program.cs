@@ -10,11 +10,11 @@ namespace Lab_Poker
             string punteggio1, punteggio2, seme_1, seme_2, language;
 
             Console.Write("What language would you let the app to run (Italian and English 'work') ");
-            language = Console.ReadLine(ToLower());
+            language = Console.ReadLine();
 
             switch (language)
             {
-                case "itaian":
+                case "italian":
                 case "it":
                     Console.Write("Inserisci il punteggio tuo ");
                     punteggio1 = Console.ReadLine();
