@@ -9,8 +9,11 @@ namespace Lab_Poker
             int punteggio_1 = 0, punteggio_2 = 0, a = 0, b = 0;
             string punteggio1, punteggio2, seme_1, seme_2, language;
 
-            Console.Write("What language would you let the app to run (Italian and English 'work') ");
-            language = Console.ReadLine();
+            do
+            {
+                Console.Write("What language would you let the app to run (Italian and English 'work') ");
+                language = Console.ReadLine();
+            } while (!(language == "it"|| language == "italian"|| language == "english"|| language == "en"));
 
             switch (language)
             {
