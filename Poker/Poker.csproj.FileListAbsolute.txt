@@ -1,0 +1,8 @@
+C:\Users\feder\source\repos\Poker\Poker\bin\Debug\Poker.exe.config
+C:\Users\feder\source\repos\Poker\Poker\bin\Debug\Poker.exe
+C:\Users\feder\source\repos\Poker\Poker\bin\Debug\Poker.pdb
+C:\Users\feder\source\repos\Poker\Poker\obj\Debug\Poker.csproj.AssemblyReference.cache
+C:\Users\feder\source\repos\Poker\Poker\obj\Debug\Poker.csproj.SuggestedBindingRedirects.cache
+C:\Users\feder\source\repos\Poker\Poker\obj\Debug\Poker.csproj.CoreCompileInputs.cache
+C:\Users\feder\source\repos\Poker\Poker\obj\Debug\Poker.exe
+C:\Users\feder\source\repos\Poker\Poker\obj\Debug\Poker.pdb
