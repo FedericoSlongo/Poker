@@ -173,8 +173,6 @@ namespace Poker
                 case "en":
                     Console.Write("Enter your score ");
                     punteggio1 = Console.ReadLine();
-                    Console.Write("Enter the score of the other person ");
-                    punteggio2 = Console.ReadLine();
 
                     switch (punteggio1)
                     {
@@ -203,8 +201,17 @@ namespace Poker
                             break;
                         default:
                             Console.WriteLine("You're score isn't valid");
+                            error = true;
                             break;
                     }
+
+                    if(error)
+                    {
+                        break;
+                    }
+
+                    Console.Write("Enter the score of the other person ");
+                    punteggio2 = Console.ReadLine();
 
                     switch (punteggio2)
                     {
@@ -233,7 +240,13 @@ namespace Poker
                             break;
                         default:
                             Console.WriteLine("The other score isn't valid");
+                            error = true;
                             break;
+                    }
+
+                    if (error)
+                    {
+                        break;
                     }
 
                     if (punteggio_1 < punteggio_2)
