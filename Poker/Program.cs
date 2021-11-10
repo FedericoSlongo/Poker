@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +12,7 @@ namespace Poker
         {
             int punteggio_1 = 0, punteggio_2 = 0, a = 0, b = 0;
             string punteggio1, punteggio2, seme_1, seme_2, language;
+            bool error=false;
 
             do
             {
@@ -25,8 +26,6 @@ namespace Poker
                 case "it":
                     Console.Write("Inserisci il punteggio tuo ");
                     punteggio1 = Console.ReadLine();
-                    Console.Write("Inserire il punteggio dell'altra persona ");
-                    punteggio2 = Console.ReadLine();
 
                     switch (punteggio1)
                     {
@@ -55,8 +54,17 @@ namespace Poker
                             break;
                         default:
                             Console.WriteLine("Il tuo punteggio non è valido");
+                            error = true;
                             break;
                     }
+
+                    if (error)
+                    {
+                        break;
+                    }
+
+                    Console.Write("Inserire il punteggio dell'altra persona ");
+                    punteggio2 = Console.ReadLine();
 
                     switch (punteggio2)
                     {
@@ -85,7 +93,13 @@ namespace Poker
                             break;
                         default:
                             Console.WriteLine("Il punteggio dell'avversario non è valido");
+                            error = true;
                             break;
+                    }
+
+                    if (error)
+                    {
+                        break;
                     }
 
                     if (punteggio_1 < punteggio_2)
