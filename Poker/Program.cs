@@ -54,7 +54,7 @@ namespace Poker
                             punteggio_1 = 12;
                             break;
                         default:
-                            Console.WriteLine("Il tuo punteggio non Ã¨ valido");
+                            Console.WriteLine("Il tuo punteggio non è valido");
                             break;
                     }
 
@@ -84,7 +84,7 @@ namespace Poker
                             punteggio_2 = 12;
                             break;
                         default:
-                            Console.WriteLine("Il punteggio dell'avversario non Ã¨ valido");
+                            Console.WriteLine("Il punteggio dell'avversario non è valido");
                             break;
                     }
 
